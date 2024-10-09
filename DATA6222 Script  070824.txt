@@ -1,0 +1,34 @@
+CREATE DATABASE mycarwashdb;
+GO
+
+USE mycarwashdb;
+GO
+
+CREATE TABLE customers (
+	customerid INT PRIMARY KEY NOT NULL,
+	name VARCHAR(50),
+	surname VARCHAR(50),
+	cell CHAR(10)
+);
+GO
+
+INSERT INTO customers (customerid, name, surname, cell)
+VALUES (100, 'Lesetja', 'Matlala', '0712356895');
+GO
+
+SELECT * FROM customers;
+GO
+
+INSERT INTO customers (customerid, name, surname, cell)
+VALUES (1001, 'Kgotlelelo', 'Shai', '0823658954'),
+		(1002, 'Mukona', 'Gwangwa', '0631235684'),
+		(1003, 'George', 'Mpai', '0792368795');
+GO
+
+SELECT * FROM customers
+WHERE customerid = 1002;
+GO
+
+SELECT name, cell FROM customers;
+GO
+
